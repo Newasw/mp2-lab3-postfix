@@ -3,17 +3,26 @@
 
 #include <string>
 #include "stack.h"
-
+#include <math.h>
+#include <stdlib.h>
 using namespace std;
 
 class TPostfix
 {
+ 
   string infix;
   string postfix;
 public:
   TPostfix()
   {
     infix = "a + b";
+  }
+  TPostfix(const char* b) {
+      infix = b;
+  
+  }
+  TPostfix(string st) {
+      infix = st;
   }
   string GetInfix() { return infix; }
   string GetPostfix() { return postfix; }
